@@ -1,12 +1,12 @@
 
 import './App.css';
+import Wether from './Components/Wether/Wether';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
-    hii
+      
+    <Wether/>
     </div>
   );
 }
