@@ -33,11 +33,11 @@ function Wether() {
         text: "Enter A Location Name",
         timer: 1800,
         customClass: {
-          popup: "custom-popup-class", // Apply custom class to the popup
+          popup: "custom-popup-class",
         },
-        width: "300px", // Set the width of the popup
-        heightAuto: false, // Disable auto height adjustment
-        showConfirmButton: false, // Hide the confirm button for this alert
+        width: "300px", 
+        heightAuto: false, 
+        showConfirmButton: false, 
       });
     }
   };
@@ -142,5 +142,4 @@ function Wether() {
     </>
   );
 }
-
 export default Wether;
