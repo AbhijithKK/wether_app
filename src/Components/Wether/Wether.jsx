@@ -15,7 +15,7 @@ function Wether() {
   const GetWether = () => {
     if (serch.trim()) {
       setLoader(true);
-      let URL = `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WETHER_API}&q=${serch}`;
+      let URL = `https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WETHER_API}&q=${serch}`;
       // http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WETHER_API}&query=${serch}`
       fetch(URL)
         .then((responce) => responce.json())
