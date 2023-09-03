@@ -52,20 +52,25 @@ function Wether() {
               Search
             </button>
           </div>
+          {loader===true
+          ?<div className="wetherImage2">
+            <Hourglass
+          visible={loader}
+          height="100"
+          width="100"
+          ariaLabel="hourglass-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          colors={["#ffff", "gray"]}
+        />
+          </div>
+          :<>
           <div
             className={
               data?.current?.condition?.icon ? "wetherImage" : "wetherImage1"
             }
           >
-            <Hourglass
-              visible={loader}
-              height="80"
-              width="80"
-              ariaLabel="hourglass-loading"
-              wrapperStyle={{}}
-              wrapperClass=""
-              colors={["#306cce", "#72a1ed"]}
-            />
+            
             <img
               src={
                 data?.current?.condition?.icon
@@ -95,26 +100,33 @@ function Wether() {
           </div>
           <div className="footer">
             <div className="humudity">
-            {data?.current?.humidity 
-            ? <><img src={Humudity} alt="" />
-              &nbsp;
-              <b style={{ fontSize: "40px" }}>
-                {data?.current?.humidity}
-              </b>
-              % <br /> Humudity</>
-              :''}
+              {data?.current?.humidity ? (
+                <>
+                  <img src={Humudity} alt="" />
+                  &nbsp;
+                  <b style={{ fontSize: "40px" }}>{data?.current?.humidity}</b>
+                  % <br /> Humudity
+                </>
+              ) : (
+                ""
+              )}
             </div>
             <div className="wind">
-            {data?.current?.wind_kph 
-            ? <><img src={wind} alt="" />
-              &nbsp;
-              <b style={{ fontSize: "40px" }}>
-                {data?.current?.wind_kph}
-              </b>{" "}
-              km/h <br /> wind speed</>
-              :''}
+              {data?.current?.wind_kph ? (
+                <>
+                  <img src={wind} alt="" />
+                  &nbsp;
+                  <b style={{ fontSize: "40px" }}>
+                    {data?.current?.wind_kph}
+                  </b>{" "}
+                  km/h <br /> wind speed
+                </>
+              ) : (
+                ""
+              )}
             </div>
           </div>
+          </>}
         </div>
       </div>
     </>

@@ -55,6 +55,14 @@ height: 250px;
 margin-left:-50px;
 margin-top: 20px;
 }
+.wetherImage2{
+display: flex;
+justify-content: center;
+width: 500px;
+height: 250px;
+margin-left:-50px;
+margin-top: 150px;
+}
 .wetherPlace{
     display: grid;
     justify-content: center;
