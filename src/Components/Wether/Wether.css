@@ -4,6 +4,7 @@ justify-content: center;
 align-items: center;
 height: 100vh;
 background-color: rgb(53, 39, 56);
+overflow: hidden;
 }
 .OuterDiv{
     background-color: rgb(16, 35, 119);
