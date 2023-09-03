@@ -120,6 +120,7 @@ function Wether() {
                     ""
                   )}
                 </div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
                 <div className="wind">
                   {data?.current?.wind_kph ? (
                     <>

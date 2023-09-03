@@ -107,4 +107,18 @@ color: white;
     height: 300px; /* Set the height */
     /* Add any other custom styles you want for the popup */
   }
-  
+  @media (max-width:400px) {
+    .OuterDiv{
+        height: 100vh;
+    }
+    .footer{
+        display: flex;
+        justify-content:center;
+        align-items: stretch;
+        margin-top: 2rem;
+    }
+    .wetherPlace h3{
+        text-align: center;
+        font-size: 15px;
+    }
+  }
