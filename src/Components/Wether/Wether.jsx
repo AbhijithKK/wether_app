@@ -5,12 +5,15 @@ import Humudity from "../../Assets/humidity.png";
 import wind from "../../Assets/wind.png";
 import Swal from "sweetalert2";
 import { Hourglass } from "react-loader-spinner";
+import MapboxAutocomplete from 'react-mapbox-autocomplete';
+
+
 function Wether() {
   const [data, setData] = useState({});
   const [serch, SetSearch] = useState("");
   const [loader, setLoader] = useState(false);
   const Searching = (e) => {
-    SetSearch(e.target.value);
+    SetSearch(e);
   };
   const GetWether = () => {
     if (serch.trim()) {
@@ -41,18 +44,23 @@ function Wether() {
       });
     }
   };
+  const suggestionSelect=(result, lat, lng, text)=> {
+    console.log(result, lat, lng, text)
+    Searching(text)
+  }
 
   return (
     <>
       <div className="Wether-mail">
         <div className="OuterDiv">
           <div className="SearchBar">
-            <input
-              type="text"
-              placeholder=" Enter Location"
-              onChange={(e) => Searching(e)}
-              value={serch}
-            />
+          <MapboxAutocomplete publicKey={process.env.REACT_APP_MAP_BOX}
+                    inputClass='form-control search'
+                    onSuggestionSelect={suggestionSelect}
+                    country='in'
+                    resetSearch={false}
+                    
+                    />
             <button type="button" onClick={GetWether}>
               Search
             </button>

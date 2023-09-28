@@ -17,9 +17,10 @@ overflow: hidden;
 .SearchBar{
     margin-left: 5rem;
     margin-top: 5rem;
+    display: flex;
 
 }
-.SearchBar input{
+.form-control{
     height: 35px;
     border-radius: 5px;
     border: none;
