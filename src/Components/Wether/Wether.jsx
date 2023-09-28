@@ -23,12 +23,10 @@ function Wether() {
       fetch(URL)
         .then((responce) => responce.json())
         .then((data) => {
-          console.log(data);
           setData(data);
           setLoader(false);
         })
         .catch((err) => {
-          console.log("eerr", err);
         });
     } else {
       Swal.fire({
@@ -45,7 +43,7 @@ function Wether() {
     }
   };
   const suggestionSelect=(result, lat, lng, text)=> {
-    console.log(result, lat, lng, text)
+   
     Searching(text)
   }
 
